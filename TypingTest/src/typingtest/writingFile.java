@@ -18,7 +18,9 @@ public class writingFile {
     public void FileWriting(int WPM, float accuracy){
      // The name of the file to open.
         String fileName = "Leaderbroad.txt";
-        String accString = Float.toString(accuracy);
+        
+        
+        StringBuilder sb = new StringBuilder();
              
 
         try {
@@ -32,8 +34,11 @@ public class writingFile {
 
             // Note that write() does not automatically
             // append a newline character.
-            bufferedWriter.write(WPM);
-            bufferedWriter.write(accString);
+            sb.append("WPM:" + WPM);
+            sb.append("\n");
+            sb.append("Accuracy: " + (accuracy * 100) + "%");
+            sb.append("\n");
+            bufferedWriter.write(sb.toString());
 
 
             // Always close files.

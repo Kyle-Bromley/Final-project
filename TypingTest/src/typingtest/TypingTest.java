@@ -63,7 +63,7 @@ public class TypingTest {
             //Execute corresponding functions
             screen.newScreen();
             switch(choice) {
-                case 1: game.playRound(10);
+                case 1: game.playRound(1);
                         screen.newScreen();
                         System.out.println("STATISTICS\n");
                         System.out.println("WPM: " + game.getWPM());
